@@ -1,8 +1,10 @@
 package wrong;
 
-public class MyLegacyTest {
+public class LegacyTest {
+	
 	public static void main(String[] args) {
-		MyApplication app = new MyApplication();
+		
+		Application app = new Application();
 		app.handleMesssages("test", "test@abc.com");
 	}
 }

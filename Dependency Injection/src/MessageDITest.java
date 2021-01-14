@@ -1,9 +1,10 @@
-public class MyMessageDITest {
+public class MessageDITest {
 
 	public static void main(String[] args) {
 		String msg = "Hallo Welt";
 		String email = "test@abc.com";
 		String phone = "+491111111123239";
+		
 		MessageServiceInjector injector = null;
 		Consumer app = null;
 
