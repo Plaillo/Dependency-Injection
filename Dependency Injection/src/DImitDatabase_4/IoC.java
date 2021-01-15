@@ -43,10 +43,9 @@ public class IoC {
 	 */
 	public class User {
 		Database database;
-		Database database2;
 
 		// Anforderung: Zweite Datenbank als Parameter
-		public User(Database database, Database database2) {
+		public User(Database database) {
 			this.database = database;
 		}
 
