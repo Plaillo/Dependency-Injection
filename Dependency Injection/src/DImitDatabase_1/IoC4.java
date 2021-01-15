@@ -1,12 +1,12 @@
-package DImitDatabase_4;
+package DImitDatabase_1;
 
-import DImitDatabase_3.IoC.MySqlDatabase;
-import DImitDatabase_3.IoC.User;
+import DImitDatabase_1.IoC3.MySqlDatabase;
+import DImitDatabase_1.IoC3.User;
 
 /**
  * Spring Framework Example
  */
-public class IoC {
+public class IoC4 {
 
 	/**
 	 * XML Configuration
@@ -22,10 +22,11 @@ public class IoC {
 	 */
 
 	public static void main(String[] args) {
-		IoC container = new IoC();
+		IoC4 container = new IoC4();
 
 		// Spring Notation zur Initialisierung 
 		// Abhängigkeiten werden injiziert und / auto-initialisiert durch XML
+		
 		@Autowired
 		User user;
 
@@ -43,10 +44,8 @@ public class IoC {
 	 */
 	public class User {
 		Database database;
-		Database database2;
 
-		// Anforderung: Zweite Datenbank als Parameter
-		public User(Database database, Database database2) {
+		public User(Database database) {
 			this.database = database;
 		}
 

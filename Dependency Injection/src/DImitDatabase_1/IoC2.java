@@ -1,16 +1,15 @@
-package DImitDatabase_2;
+package DImitDatabase_1;
 
-import DImitDatabase_4.IoC.Database;
+import DImitDatabase_1.IoC4.Database;
 
 /**
  * Concrete(Bad) Example
  */
-public class IoC {
+public class IoC2 {
 
 	public static void main(String[] args) {
-		IoC container = new IoC();
+		IoC2 container = new IoC2();
 		// Oracle Datenbank kann nicht benutzt werden, weil die Instanz hart vercodet
-		// ist
 		User user = container.new User(container.new MySqlDatabase());
 		user.add("Irgendwelche Daten");
 

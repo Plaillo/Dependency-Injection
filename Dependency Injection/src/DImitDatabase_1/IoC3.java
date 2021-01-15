@@ -1,19 +1,22 @@
-package DImitDatabase_3;
+package DImitDatabase_1;
 
-import DImitDatabase_4.IoC.Database;
+import DImitDatabase_1.IoC4.Database;
 
 /**
  * Abstract(Good) Example
  */
-public class IoC {
+public class IoC3 {
 
 	public static void main(String[] args) {
-		IoC container = new IoC();
+		IoC3 container = new IoC3();
 		User user = container.new User(container.new OracleDatabase());
 		user.add("Irgendwelche Daten");
 
 	}
-
+	
+	/**
+	 * Business Layer Logic
+	 */
 	public class User {
 		// Änderung 1 - Abstraktion MySqlDatabase -> Database
 		Database database;
@@ -30,9 +33,7 @@ public class IoC {
 
 	// Änderung 3 - Implementierung Database
 	/**
-	 * 
-	 * @author NiK
-	 *
+	 * Database Access Layer
 	 */
 	public class MySqlDatabase implements Database{
 
