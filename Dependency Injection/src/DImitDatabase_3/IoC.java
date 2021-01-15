@@ -1,11 +1,16 @@
 package DImitDatabase_3;
 
+import DImitDatabase_4.IoC.Database;
+
+/**
+ * Abstract(Good) Example
+ */
 public class IoC {
 
 	public static void main(String[] args) {
 		IoC container = new IoC();
-		User user = container.new User(container.new MySqlDatabase());
-		user.add("This is some data");
+		User user = container.new User(container.new OracleDatabase());
+		user.add("Irgendwelche Daten");
 
 	}
 
@@ -24,14 +29,28 @@ public class IoC {
 	}
 
 	// Änderung 3 - Implementierung Database
+	/**
+	 * 
+	 * @author NiK
+	 *
+	 */
 	public class MySqlDatabase implements Database{
 
 		public void persist(String data) {
-			System.out.println("Mysql has persisted: " + data);
+			System.out.println("MySql hält bereit: " + data);
 		}
 	}
 	
-	// Änderung 4 - Implementierung Interface Database
+	public class OracleDatabase implements Database {
+
+		@Override
+		public void persist(String data) {
+			System.out.println("Oracle hält bereit: " + data);
+
+		}
+	}
+	
+	// Änderung 4 - Erstellung eines Interface Database
 	public interface Database {
 
 		void persist(String data);
