@@ -1,7 +1,7 @@
 package DImitDatabase;
 
 public class IoC {
-
+	//HAALLLLLLOOOOOOOo
 	public static void main(String[] args) {
 		IoC container = new IoC();
 		User user = container.new User();
