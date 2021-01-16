@@ -17,7 +17,7 @@ public class PersonService {
 	 */
 	public class User {
 
-		MySqlDatabase database;
+		MySqlDatabase database = new MySqlDatabase();
 		/* Fehler: MySql instanz erschwert testen einer Instanz 
 		 * Fehler: Man kann keine Mock-Instanz einer Datenbank injizieren 
 		 * Fehler: Andere Datenbanken können nicht getestet werden */ 

@@ -30,7 +30,7 @@ public class PersonService {
 	}
 
 	private void doSomething() {
-		// TODO Auto-generated method stub
+		System.out.println(this.database);
 	}
 
 }

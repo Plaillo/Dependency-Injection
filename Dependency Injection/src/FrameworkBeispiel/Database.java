@@ -2,6 +2,6 @@ package FrameworkBeispiel;
 
 public interface Database {
 
-	void persist(Person person);
+	void persist(Person data);
 	
 }

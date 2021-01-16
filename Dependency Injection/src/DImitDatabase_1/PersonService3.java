@@ -1,6 +1,6 @@
 package DImitDatabase_1;
 
-import DImitDatabase_1.IoC4.Database;
+
 
 /**
  * Abstract(Good) Example

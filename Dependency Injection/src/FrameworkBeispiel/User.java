@@ -11,7 +11,7 @@ public class User {
 		this.database = database;
 	}
 
-	public void add(String data) {
+	public void add(Person data) {
 		database.persist(data);
 	}
 }
