@@ -1,5 +1,8 @@
 package FrameworkBeispiel;
 
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
+
 public class PersonService {
 
 	public static void main(String[] arguments) {
@@ -16,4 +19,10 @@ public class PersonService {
 			personService.doSomething();
 		}
 	}
+
+	private void doSomething() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
