@@ -1,7 +1,5 @@
 package DImitDatabase_1;
 
-
-
 /**
  * Abstract(Good) Example
  */
@@ -11,9 +9,8 @@ public class PersonService3 {
 		PersonService3 container = new PersonService3();
 		User user = container.new User(container.new OracleDatabase());
 		user.add("Irgendwelche Daten");
-
 	}
-	
+
 	/**
 	 * Business Layer Logic
 	 */
@@ -35,13 +32,13 @@ public class PersonService3 {
 	/**
 	 * Database Access Layer
 	 */
-	public class MySqlDatabase implements Database{
+	public class MySqlDatabase implements Database {
 
 		public void persist(String data) {
 			System.out.println("MySql hält bereit: " + data);
 		}
 	}
-	
+
 	public class OracleDatabase implements Database {
 
 		@Override
@@ -50,7 +47,7 @@ public class PersonService3 {
 
 		}
 	}
-	
+
 	// Änderung 4 - Erstellung eines Interface Database
 	public interface Database {
 
