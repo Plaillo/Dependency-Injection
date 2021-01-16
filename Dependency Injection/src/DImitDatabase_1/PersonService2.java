@@ -3,10 +3,10 @@ package DImitDatabase_1;
 /**
  * Concrete(Bad) Example
  */
-public class IoC2 {
+public class PersonService2 {
 
 	public static void main(String[] args) {
-		IoC2 container = new IoC2();
+		PersonService2 container = new PersonService2();
 		// Oracle Datenbank kann nicht benutzt werden, weil die Instanz hart vercodet
 		User user = container.new User(container.new MySqlDatabase());
 		user.add("Irgendwelche Daten");

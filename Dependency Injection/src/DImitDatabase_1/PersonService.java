@@ -3,10 +3,10 @@ package DImitDatabase_1;
 /**
  * Bad Example
  */
-public class IoC {
+public class PersonService {
 
 	public static void main(String[] args) {
-		IoC container = new IoC();
+		PersonService container = new PersonService();
 		User user = container.new User();
 		user.add("Irgendwelche Daten");
 
@@ -18,12 +18,10 @@ public class IoC {
 	public class User {
 
 		MySqlDatabase database;
-
-		/* Fehler: MySql instanz erschwert testen einer Instantz 
-		   Fehler: Man kann keine Mock-Instanz einer Datenbank injizieren
-		   Fehler: Andere Datenbanken können nicht getestet werden */
+		/* Fehler: MySql instanz erschwert testen einer Instanz 
+		 * Fehler: Man kann keine Mock-Instanz einer Datenbank injizieren 
+		 * Fehler: Andere Datenbanken können nicht getestet werden */ 
 		
-		// IoC: Control-Flow muss geändert werden
 		public User() {
 			database = new MySqlDatabase();
 		}

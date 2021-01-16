@@ -5,10 +5,10 @@ import DImitDatabase_1.IoC4.Database;
 /**
  * Abstract(Good) Example
  */
-public class IoC3 {
+public class PersonService3 {
 
 	public static void main(String[] args) {
-		IoC3 container = new IoC3();
+		PersonService3 container = new PersonService3();
 		User user = container.new User(container.new OracleDatabase());
 		user.add("Irgendwelche Daten");
 
