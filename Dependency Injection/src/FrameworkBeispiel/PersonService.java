@@ -1,10 +1,19 @@
 package FrameworkBeispiel;
 
+import javax.inject.Inject;
+
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 
 public class PersonService {
 
+	@Inject
+	Database database;
+	
+	public void add(Person person) {
+		database.persist(person);
+	}
+	
 	public static void main(String[] arguments) {
 		Weld weld = new Weld();
 
