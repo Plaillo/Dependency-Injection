@@ -1,7 +1,5 @@
 package DImitDatabase_1;
 
-import DImitDatabase_1.IoC4.Database;
-
 /**
  * Concrete(Bad) Example
  */
@@ -41,9 +39,8 @@ public class IoC2 {
 	}
 
 	// Kunde will Oracle Datenbank
-	public class OracleDatabase implements Database {
+	public class OracleDatabase {
 
-		@Override
 		public void persist(String data) {
 			System.out.println("Oracle hält bereit: " + data);
 
