@@ -29,7 +29,7 @@ public class PersonService {
 		}
 	}
 
-	private void doSomething() {
+	public void doSomething() {
 		System.out.println(this.database);
 	}
 
